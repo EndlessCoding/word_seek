@@ -8,9 +8,9 @@
 <script type="text/javascript" src="../Public/js/TpJquery/jquery.form.js"></script>
 <script language="JavaScript">
 function checkName(){
-    $.post('__URL__/checkName',{'keyword':$('#keyword').val()},function(data){
+    $.post('__URL__/checkword',{'keyword':$('#keyword').val()},function(data){
         $('#result').html(data.info).show();
-       
+        $('#list').html(data.data).show();
     },'json');
 };
 </script>
@@ -34,8 +34,10 @@ function checkName(){
 <?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): ++$i;$mod = ($i % 2 )?><?php echo ($vo['word']); ?>----[<?php echo ($vo['sound']); ?>]<br />
 <?php echo ($vo['chinese']); ?><br /><br /><?php endforeach; endif; else: echo "" ;endif; ?>
 
-<div id="result"></div>
-<div id="list"></div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<div id="result" style="color:red"></div>
+<div id="list" style="color:green"></div>
+
 
 <br /><br />
 <div style="text-align:center">
