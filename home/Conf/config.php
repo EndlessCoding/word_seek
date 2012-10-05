@@ -12,12 +12,12 @@ return $arr = array(
     'DB_PORT'    => '3306',
     'DB_PREFIX'  => '',	    //表前缀
 
-    //缓存控制
-	'DB_FIELD_CACHE'=>false,
-	'HTML_CACHE_ON'=>false,   //
-    'HTML_CACHE_ON'=>false,
-	'TMPL_CACHE_ON'=>false,
-	'Action_CACHE_ON'=>false,
+    //项目缓存配置，开发时建议关闭，发布时建议开启
+	//'DB_FIELD_CACHE'=>false,
+	//'HTML_CACHE_ON'=>false,   //
+    //'HTML_CACHE_ON'=>false,
+	//'TMPL_CACHE_ON'=>false,
+	//'Action_CACHE_ON'=>false,
 	
 
     'APP_DEBUG'  => 0,	    //调试模式开关
